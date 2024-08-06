@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEF1FD762C6298B900E016A5 /* VeggieKitchenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD752C6298B900E016A5 /* VeggieKitchenApp.swift */; };
+		CEF1FD782C6298B900E016A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD772C6298B900E016A5 /* ContentView.swift */; };
+		CEF1FD7A2C6298B900E016A5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD792C6298B900E016A5 /* Item.swift */; };
+		CEF1FD7C2C6298BB00E016A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF1FD7B2C6298BB00E016A5 /* Assets.xcassets */; };
+		CEF1FD7F2C6298BB00E016A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF1FD7E2C6298BB00E016A5 /* Preview Assets.xcassets */; };
+		CEF1FD892C6298BC00E016A5 /* VeggieKitchenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD882C6298BC00E016A5 /* VeggieKitchenTests.swift */; };
+		CEF1FD932C6298BC00E016A5 /* VeggieKitchenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD922C6298BC00E016A5 /* VeggieKitchenUITests.swift */; };
+		CEF1FD952C6298BC00E016A5 /* VeggieKitchenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD942C6298BC00E016A5 /* VeggieKitchenUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEF1FD852C6298BC00E016A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEF1FD6A2C6298B900E016A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEF1FD712C6298B900E016A5;
+			remoteInfo = VeggieKitchen;
+		};
+		CEF1FD8F2C6298BC00E016A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEF1FD6A2C6298B900E016A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEF1FD712C6298B900E016A5;
+			remoteInfo = VeggieKitchen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEF1FD722C6298B900E016A5 /* VeggieKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeggieKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF1FD752C6298B900E016A5 /* VeggieKitchenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeggieKitchenApp.swift; sourceTree = "<group>"; };
+		CEF1FD772C6298B900E016A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEF1FD792C6298B900E016A5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CEF1FD7B2C6298BB00E016A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEF1FD7E2C6298BB00E016A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEF1FD842C6298BC00E016A5 /* VeggieKitchenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeggieKitchenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF1FD882C6298BC00E016A5 /* VeggieKitchenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeggieKitchenTests.swift; sourceTree = "<group>"; };
+		CEF1FD8E2C6298BC00E016A5 /* VeggieKitchenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeggieKitchenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF1FD922C6298BC00E016A5 /* VeggieKitchenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeggieKitchenUITests.swift; sourceTree = "<group>"; };
+		CEF1FD942C6298BC00E016A5 /* VeggieKitchenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeggieKitchenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEF1FD6F2C6298B900E016A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF1FD812C6298BC00E016A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF1FD8B2C6298BC00E016A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEF1FD692C6298B900E016A5 = {
+			isa = PBXGroup;
+			children = (
+				CEF1FD742C6298B900E016A5 /* VeggieKitchen */,
+				CEF1FD872C6298BC00E016A5 /* VeggieKitchenTests */,
+				CEF1FD912C6298BC00E016A5 /* VeggieKitchenUITests */,
+				CEF1FD732C6298B900E016A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEF1FD732C6298B900E016A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1FD722C6298B900E016A5 /* VeggieKitchen.app */,
+				CEF1FD842C6298BC00E016A5 /* VeggieKitchenTests.xctest */,
+				CEF1FD8E2C6298BC00E016A5 /* VeggieKitchenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEF1FD742C6298B900E016A5 /* VeggieKitchen */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1FD752C6298B900E016A5 /* VeggieKitchenApp.swift */,
+				CEF1FD772C6298B900E016A5 /* ContentView.swift */,
+				CEF1FD792C6298B900E016A5 /* Item.swift */,
+				CEF1FD7B2C6298BB00E016A5 /* Assets.xcassets */,
+				CEF1FD7D2C6298BB00E016A5 /* Preview Content */,
+			);
+			path = VeggieKitchen;
+			sourceTree = "<group>";
+		};
+		CEF1FD7D2C6298BB00E016A5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1FD7E2C6298BB00E016A5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEF1FD872C6298BC00E016A5 /* VeggieKitchenTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1FD882C6298BC00E016A5 /* VeggieKitchenTests.swift */,
+			);
+			path = VeggieKitchenTests;
+			sourceTree = "<group>";
+		};
+		CEF1FD912C6298BC00E016A5 /* VeggieKitchenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1FD922C6298BC00E016A5 /* VeggieKitchenUITests.swift */,
+				CEF1FD942C6298BC00E016A5 /* VeggieKitchenUITestsLaunchTests.swift */,
+			);
+			path = VeggieKitchenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEF1FD712C6298B900E016A5 /* VeggieKitchen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEF1FD982C6298BC00E016A5 /* Build configuration list for PBXNativeTarget "VeggieKitchen" */;
+			buildPhases = (
+				CEF1FD6E2C6298B900E016A5 /* Sources */,
+				CEF1FD6F2C6298B900E016A5 /* Frameworks */,
+				CEF1FD702C6298B900E016A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VeggieKitchen;
+			productName = VeggieKitchen;
+			productReference = CEF1FD722C6298B900E016A5 /* VeggieKitchen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEF1FD832C6298BC00E016A5 /* VeggieKitchenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEF1FD9B2C6298BC00E016A5 /* Build configuration list for PBXNativeTarget "VeggieKitchenTests" */;
+			buildPhases = (
+				CEF1FD802C6298BC00E016A5 /* Sources */,
+				CEF1FD812C6298BC00E016A5 /* Frameworks */,
+				CEF1FD822C6298BC00E016A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEF1FD862C6298BC00E016A5 /* PBXTargetDependency */,
+			);
+			name = VeggieKitchenTests;
+			productName = VeggieKitchenTests;
+			productReference = CEF1FD842C6298BC00E016A5 /* VeggieKitchenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEF1FD8D2C6298BC00E016A5 /* VeggieKitchenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEF1FD9E2C6298BC00E016A5 /* Build configuration list for PBXNativeTarget "VeggieKitchenUITests" */;
+			buildPhases = (
+				CEF1FD8A2C6298BC00E016A5 /* Sources */,
+				CEF1FD8B2C6298BC00E016A5 /* Frameworks */,
+				CEF1FD8C2C6298BC00E016A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEF1FD902C6298BC00E016A5 /* PBXTargetDependency */,
+			);
+			name = VeggieKitchenUITests;
+			productName = VeggieKitchenUITests;
+			productReference = CEF1FD8E2C6298BC00E016A5 /* VeggieKitchenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEF1FD6A2C6298B900E016A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					CEF1FD712C6298B900E016A5 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					CEF1FD832C6298BC00E016A5 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = CEF1FD712C6298B900E016A5;
+					};
+					CEF1FD8D2C6298BC00E016A5 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = CEF1FD712C6298B900E016A5;
+					};
+				};
+			};
+			buildConfigurationList = CEF1FD6D2C6298B900E016A5 /* Build configuration list for PBXProject "VeggieKitchen" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEF1FD692C6298B900E016A5;
+			productRefGroup = CEF1FD732C6298B900E016A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEF1FD712C6298B900E016A5 /* VeggieKitchen */,
+				CEF1FD832C6298BC00E016A5 /* VeggieKitchenTests */,
+				CEF1FD8D2C6298BC00E016A5 /* VeggieKitchenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEF1FD702C6298B900E016A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF1FD7F2C6298BB00E016A5 /* Preview Assets.xcassets in Resources */,
+				CEF1FD7C2C6298BB00E016A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF1FD822C6298BC00E016A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF1FD8C2C6298BC00E016A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEF1FD6E2C6298B900E016A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF1FD782C6298B900E016A5 /* ContentView.swift in Sources */,
+				CEF1FD7A2C6298B900E016A5 /* Item.swift in Sources */,
+				CEF1FD762C6298B900E016A5 /* VeggieKitchenApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF1FD802C6298BC00E016A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF1FD892C6298BC00E016A5 /* VeggieKitchenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF1FD8A2C6298BC00E016A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF1FD952C6298BC00E016A5 /* VeggieKitchenUITestsLaunchTests.swift in Sources */,
+				CEF1FD932C6298BC00E016A5 /* VeggieKitchenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEF1FD862C6298BC00E016A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEF1FD712C6298B900E016A5 /* VeggieKitchen */;
+			targetProxy = CEF1FD852C6298BC00E016A5 /* PBXContainerItemProxy */;
+		};
+		CEF1FD902C6298BC00E016A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEF1FD712C6298B900E016A5 /* VeggieKitchen */;
+			targetProxy = CEF1FD8F2C6298BC00E016A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CEF1FD962C6298BC00E016A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEF1FD972C6298BC00E016A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEF1FD992C6298BC00E016A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VeggieKitchen/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = julie.VeggieKitchen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEF1FD9A2C6298BC00E016A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VeggieKitchen/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = julie.VeggieKitchen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEF1FD9C2C6298BC00E016A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = julie.VeggieKitchenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeggieKitchen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VeggieKitchen";
+			};
+			name = Debug;
+		};
+		CEF1FD9D2C6298BC00E016A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = julie.VeggieKitchenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeggieKitchen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VeggieKitchen";
+			};
+			name = Release;
+		};
+		CEF1FD9F2C6298BC00E016A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = julie.VeggieKitchenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VeggieKitchen;
+			};
+			name = Debug;
+		};
+		CEF1FDA02C6298BC00E016A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = julie.VeggieKitchenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VeggieKitchen;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEF1FD6D2C6298B900E016A5 /* Build configuration list for PBXProject "VeggieKitchen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF1FD962C6298BC00E016A5 /* Debug */,
+				CEF1FD972C6298BC00E016A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEF1FD982C6298BC00E016A5 /* Build configuration list for PBXNativeTarget "VeggieKitchen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF1FD992C6298BC00E016A5 /* Debug */,
+				CEF1FD9A2C6298BC00E016A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEF1FD9B2C6298BC00E016A5 /* Build configuration list for PBXNativeTarget "VeggieKitchenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF1FD9C2C6298BC00E016A5 /* Debug */,
+				CEF1FD9D2C6298BC00E016A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEF1FD9E2C6298BC00E016A5 /* Build configuration list for PBXNativeTarget "VeggieKitchenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF1FD9F2C6298BC00E016A5 /* Debug */,
+				CEF1FDA02C6298BC00E016A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEF1FD6A2C6298B900E016A5 /* Project object */;
+}
