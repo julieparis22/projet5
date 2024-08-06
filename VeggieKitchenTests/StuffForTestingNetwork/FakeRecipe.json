@@ -1,0 +1,100 @@
+
+{
+    "vegetarian": true,
+    "vegan": true,
+    "glutenFree": true,
+    "dairyFree": true,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": false,
+    "sustainable": false,
+    "lowFodmap": false,
+    "weightWatcherSmartPoints": 6,
+    "gaps": "no",
+    "preparationMinutes": null,
+    "cookingMinutes": null,
+    "aggregateLikes": 1,
+    "healthScore": 11,
+    "creditsText": "swasthi",
+    "license": "spoonacular's terms",
+    "sourceName": "spoonacular",
+    "pricePerServing": 70.59,
+    "extendedIngredients": [
+        {
+            "id": 16157,
+            "aisle": "Gluten Free",
+            "image": "chickpea-flour-or-another-gluten-free-flour.jpg",
+            "consistency": "SOLID",
+            "name": "besan",
+            "nameClean": "chickpea flour",
+            "original": "1 ¼ cup besan",
+            "originalName": "besan",
+            "amount": 1.25,
+            "unit": "cup",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 1.25,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 150.0,
+                    "unitShort": "g",
+                    "unitLong": "grams"
+                }
+            }
+        },
+
+        {
+            "id": 11216,
+            "aisle": "Produce",
+            "image": "ginger.png",
+            "consistency": "SOLID",
+            "name": "sp",
+            "nameClean": "ginger",
+            "original": "1 sp½ tsp. ginger",
+            "originalName": "sp½ tsp. ginger",
+            "amount": 1.0,
+            "unit": "",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        }
+    ],
+    "id": 627987,
+    "title": "onpe",
+    "author": "swasthi",
+    "readyInMinutes": 25,
+    "servings": 4,
+    "sourceUrl": "https://spoonacular.com/-1423843504201",
+    "image": "https://img.spoonacular.com/recipes/627987-556x370.jpg",
+    "imageType": "jpg",
+    "summary": "Oni.",
+    "cuisines": [],
+    "dishTypes": [
+        "side dish"
+    ],
+    "diets": [
+        "gluten free",
+        "dairy free",
+        "lacto ovo vegetarian",
+        "vegan"
+    ],
+    "occasions": [],
+    "instructions": "<p><a href=\"http://indianhealthyrecipes.com/crispy-onion-pakoda-pakora-recipe/\">instructions on indianhealthyrecipes.com</a><strong></strong></p>",
+    "analyzedInstructions": [],
+    "originalId": null,
+    "spoonacularScore": 0.40026000142097473,
+    "spoonacularSourceUrl": "https://spoonacular.com/onion-pakoda-recipe-627987"
+}

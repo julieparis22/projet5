@@ -2,13 +2,13 @@
 //  VeggieKitchenTests.swift
 //  VeggieKitchenTests
 //
-//  Created by julie ryan on 06/08/2024.
+//  Created by julie ryan on 30/07/2024.
 //
 
 import XCTest
 @testable import VeggieKitchen
 
-final class VeggieKitchenTests: XCTestCase {
+final class VeggieKitchenTests2: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

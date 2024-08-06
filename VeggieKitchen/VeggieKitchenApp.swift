@@ -2,7 +2,7 @@
 //  VeggieKitchenApp.swift
 //  VeggieKitchen
 //
-//  Created by julie ryan on 06/08/2024.
+//  Created by julie ryan on 30/07/2024.
 //
 
 import SwiftUI
@@ -12,7 +12,7 @@ import SwiftData
 struct VeggieKitchenApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Meal.self,IngredientMeal.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,7 @@ struct VeggieKitchenApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
         .modelContainer(sharedModelContainer)
     }
