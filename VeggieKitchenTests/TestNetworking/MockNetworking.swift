@@ -9,9 +9,7 @@ import Foundation
 
 
 @testable import VeggieKitchen
-// Classe de Mock pour Networking
-// Classe Mock pour Networking
-// Classe Mock pour Networking
+
 
 class MockURLSessionDataTask: URLSessionDataTaskProtocol {
     private let resumeHandler: () -> Void

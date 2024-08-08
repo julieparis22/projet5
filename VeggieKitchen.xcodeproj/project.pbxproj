@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEDBD8BE2C63FA2500278B73 /* CalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */; };
 		CEF1FD762C6298B900E016A5 /* VeggieKitchenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD752C6298B900E016A5 /* VeggieKitchenApp.swift */; };
 		CEF1FD782C6298B900E016A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD772C6298B900E016A5 /* ContentView.swift */; };
 		CEF1FD7A2C6298B900E016A5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD792C6298B900E016A5 /* Item.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManagerTests.swift; sourceTree = "<group>"; };
 		CEF1FD722C6298B900E016A5 /* VeggieKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeggieKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF1FD752C6298B900E016A5 /* VeggieKitchenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeggieKitchenApp.swift; sourceTree = "<group>"; };
 		CEF1FD772C6298B900E016A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,21 +91,21 @@
 		CEF1FDB82C6299FE00E016A5 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		CEF1FDB92C6299FE00E016A5 /* Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		CEF1FDBA2C6299FE00E016A5 /* RowRecipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowRecipes.swift; sourceTree = "<group>"; };
-		CEF1FDBD2C6299FE00E016A5 /* IngredientMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngredientMeal.swift; path = VeggieKitchen/Model/IngredientMeal.swift; sourceTree = SOURCE_ROOT; };
+		CEF1FDBD2C6299FE00E016A5 /* IngredientMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngredientMeal.swift; path = VeggieKitchen/Model/structures/IngredientMeal.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDCE2C629A3300E016A5 /* IngredientsModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngredientsModelView.swift; path = VeggieKitchen/ModelView/IngredientsModelView.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDCF2C629A3300E016A5 /* SingleRecipeModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleRecipeModelView.swift; path = VeggieKitchen/ModelView/SingleRecipeModelView.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDD22C629A4C00E016A5 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = VeggieKitchen/MainView.swift; sourceTree = SOURCE_ROOT; };
-		CEF1FDD32C629A4C00E016A5 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = VeggieKitchen/Meal.swift; sourceTree = SOURCE_ROOT; };
+		CEF1FDD32C629A4C00E016A5 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = VeggieKitchen/Model/structures/Meal.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDD42C629A4C00E016A5 /* CalendarEventsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarEventsView.swift; path = VeggieKitchen/CalendarEventsView.swift; sourceTree = SOURCE_ROOT; };
-		CEF1FDD82C629A5200E016A5 /* AddMealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddMealView.swift; path = VeggieKitchen/ViewGroup/AddMealView.swift; sourceTree = SOURCE_ROOT; };
+		CEF1FDD82C629A5200E016A5 /* AddMealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddMealView.swift; path = VeggieKitchen/ModelViewGroup/AddMealView.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDDA2C629A5C00E016A5 /* RecipesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipesListView.swift; path = VeggieKitchen/ViewGroup/RecipesListView.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDDC2C629AC600E016A5 /* FakeRecipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeRecipe.json; sourceTree = "<group>"; };
 		CEF1FDDD2C629AC600E016A5 /* FakeRecipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeRecipes.json; sourceTree = "<group>"; };
 		CEF1FDDE2C629AC600E016A5 /* MockNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworking.swift; sourceTree = "<group>"; };
 		CEF1FDDF2C629AC600E016A5 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
-		CEF1FDE52C629AE200E016A5 /* RecipeListLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeListLoaderTests.swift; path = VeggieKitchenTests/RecipeListLoaderTests.swift; sourceTree = SOURCE_ROOT; };
+		CEF1FDE52C629AE200E016A5 /* RecipeListLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeListLoaderTests.swift; path = VeggieKitchenTests/TestNetworking/RecipeListLoaderTests.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDE72C629AEC00E016A5 /* VeggieKitchenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VeggieKitchenTests.swift; path = VeggieKitchenTests/VeggieKitchenTests.swift; sourceTree = SOURCE_ROOT; };
-		CEF1FDE82C629AEC00E016A5 /* GetSingleRecipeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetSingleRecipeTests.swift; path = VeggieKitchenTests/GetSingleRecipeTests.swift; sourceTree = SOURCE_ROOT; };
+		CEF1FDE82C629AEC00E016A5 /* GetSingleRecipeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetSingleRecipeTests.swift; path = VeggieKitchenTests/TestNetworking/GetSingleRecipeTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEDBD8BB2C63F77F00278B73 /* TestNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1FDDE2C629AC600E016A5 /* MockNetworking.swift */,
+				CEF1FDDF2C629AC600E016A5 /* sample.jpg */,
+				CEF1FDDD2C629AC600E016A5 /* FakeRecipes.json */,
+				CEF1FDDC2C629AC600E016A5 /* FakeRecipe.json */,
+				CEF1FDE52C629AE200E016A5 /* RecipeListLoaderTests.swift */,
+				CEF1FDE82C629AEC00E016A5 /* GetSingleRecipeTests.swift */,
+			);
+			path = TestNetworking;
+			sourceTree = "<group>";
+		};
+		CEDBD8BC2C63F8FE00278B73 /* TestCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */,
+			);
+			path = TestCalendar;
+			sourceTree = "<group>";
+		};
 		CEF1FD692C6298B900E016A5 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +200,9 @@
 		CEF1FD872C6298BC00E016A5 /* VeggieKitchenTests */ = {
 			isa = PBXGroup;
 			children = (
+				CEDBD8BC2C63F8FE00278B73 /* TestCalendar */,
+				CEF1FDE72C629AEC00E016A5 /* VeggieKitchenTests.swift */,
+				CEDBD8BB2C63F77F00278B73 /* TestNetworking */,
 				CEF1FDE02C629AC600E016A5 /* StuffForTestingNetwork */,
 				CEF1FD882C6298BC00E016A5 /* VeggieKitchenTests.swift */,
 			);
@@ -196,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				CEF1FDB32C6299FE00E016A5 /* Calendar */,
-				CEF1FDBD2C6299FE00E016A5 /* IngredientMeal.swift */,
 				CEF1FDA72C6299FE00E016A5 /* MockTools */,
 				CEF1FDA92C6299FE00E016A5 /* Network */,
 				CEF1FDB02C6299FE00E016A5 /* RecipeManagement */,
@@ -209,10 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				CEF1FDDA2C629A5C00E016A5 /* RecipesListView.swift */,
-				CEF1FDD82C629A5200E016A5 /* AddMealView.swift */,
 				CEF1FDD42C629A4C00E016A5 /* CalendarEventsView.swift */,
 				CEF1FDD22C629A4C00E016A5 /* MainView.swift */,
-				CEF1FDD32C629A4C00E016A5 /* Meal.swift */,
 			);
 			path = ViewGroup;
 			sourceTree = "<group>";
@@ -220,6 +243,7 @@
 		CEF1FDA52C6299E100E016A5 /* ModelViewGroup */ = {
 			isa = PBXGroup;
 			children = (
+				CEF1FDD82C629A5200E016A5 /* AddMealView.swift */,
 				CEF1FDCE2C629A3300E016A5 /* IngredientsModelView.swift */,
 				CEF1FDCF2C629A3300E016A5 /* SingleRecipeModelView.swift */,
 			);
@@ -289,6 +313,8 @@
 		CEF1FDBC2C6299FE00E016A5 /* structures */ = {
 			isa = PBXGroup;
 			children = (
+				CEF1FDD32C629A4C00E016A5 /* Meal.swift */,
+				CEF1FDBD2C6299FE00E016A5 /* IngredientMeal.swift */,
 				CEF1FDB62C6299FE00E016A5 /* Esthetic */,
 				CEF1FDBB2C6299FE00E016A5 /* Recipes */,
 			);
@@ -299,13 +325,6 @@
 		CEF1FDE02C629AC600E016A5 /* StuffForTestingNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				CEF1FDE82C629AEC00E016A5 /* GetSingleRecipeTests.swift */,
-				CEF1FDE72C629AEC00E016A5 /* VeggieKitchenTests.swift */,
-				CEF1FDE52C629AE200E016A5 /* RecipeListLoaderTests.swift */,
-				CEF1FDDC2C629AC600E016A5 /* FakeRecipe.json */,
-				CEF1FDDD2C629AC600E016A5 /* FakeRecipes.json */,
-				CEF1FDDE2C629AC600E016A5 /* MockNetworking.swift */,
-				CEF1FDDF2C629AC600E016A5 /* sample.jpg */,
 			);
 			path = StuffForTestingNetwork;
 			sourceTree = "<group>";
@@ -478,6 +497,7 @@
 				CEF1FD892C6298BC00E016A5 /* VeggieKitchenTests.swift in Sources */,
 				CEF1FDE62C629AE200E016A5 /* RecipeListLoaderTests.swift in Sources */,
 				CEF1FDEA2C629AED00E016A5 /* GetSingleRecipeTests.swift in Sources */,
+				CEDBD8BE2C63FA2500278B73 /* CalendarManagerTests.swift in Sources */,
 				CEF1FDE32C629AC600E016A5 /* MockNetworking.swift in Sources */,
 				CEF1FDE92C629AED00E016A5 /* VeggieKitchenTests.swift in Sources */,
 			);

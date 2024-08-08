@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    @State var title = "tomato"
    
     var body: some View {
    Text("main view")
@@ -31,7 +32,7 @@ struct MainView: View {
                 Text("Calendar")
                     }
                         
-            AddMealView(ingredients: [IngredientMeal(original: "bob")])  .tabItem {
+            AddMealView(title: $title, ingredients: [IngredientMeal(original: "bob")])  .tabItem {
                 Image(systemName: "plus.circle.fill")
                 Text("Ajouter element")
             }
