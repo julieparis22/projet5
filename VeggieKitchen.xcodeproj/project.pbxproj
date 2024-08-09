@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE993FBC2C6648EC004CAB28 /* SingleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE993FBB2C6648EC004CAB28 /* SingleEvent.swift */; };
 		CE993FBE2C664E5F004CAB28 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE993FBD2C664E5F004CAB28 /* TestView.swift */; };
+		CE993FC42C665A79004CAB28 /* SingleEventModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE993FC32C665A79004CAB28 /* SingleEventModelView.swift */; };
 		CEDBD8BE2C63FA2500278B73 /* CalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */; };
 		CEF1FD762C6298B900E016A5 /* VeggieKitchenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD752C6298B900E016A5 /* VeggieKitchenApp.swift */; };
 		CEF1FD782C6298B900E016A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD772C6298B900E016A5 /* ContentView.swift */; };
@@ -67,8 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE993FBB2C6648EC004CAB28 /* SingleEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEvent.swift; sourceTree = "<group>"; };
 		CE993FBD2C664E5F004CAB28 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		CE993FC32C665A79004CAB28 /* SingleEventModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventModelView.swift; sourceTree = "<group>"; };
 		CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManagerTests.swift; sourceTree = "<group>"; };
 		CEF1FD722C6298B900E016A5 /* VeggieKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeggieKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF1FD752C6298B900E016A5 /* VeggieKitchenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeggieKitchenApp.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 				CEF1FDD82C629A5200E016A5 /* AddMealView.swift */,
 				CEF1FDCE2C629A3300E016A5 /* IngredientsModelView.swift */,
 				CEF1FDCF2C629A3300E016A5 /* SingleRecipeModelView.swift */,
-				CE993FBB2C6648EC004CAB28 /* SingleEvent.swift */,
+				CE993FC32C665A79004CAB28 /* SingleEventModelView.swift */,
 			);
 			path = ModelViewGroup;
 			sourceTree = "<group>";
@@ -470,7 +470,6 @@
 			files = (
 				CEF1FDDB2C629A5C00E016A5 /* RecipesListView.swift in Sources */,
 				CEF1FDC82C6299FE00E016A5 /* ImageLoader.swift in Sources */,
-				CE993FBC2C6648EC004CAB28 /* SingleEvent.swift in Sources */,
 				CEF1FDD12C629A3300E016A5 /* SingleRecipeModelView.swift in Sources */,
 				CEF1FDCD2C6299FE00E016A5 /* IngredientMeal.swift in Sources */,
 				CEF1FDC62C6299FE00E016A5 /* CalendarViewController.swift in Sources */,
@@ -485,6 +484,7 @@
 				CEF1FDC22C6299FE00E016A5 /* RealRecipesService.swift in Sources */,
 				CEF1FDD72C629A4C00E016A5 /* CalendarEventsView.swift in Sources */,
 				CEF1FDD92C629A5200E016A5 /* AddMealView.swift in Sources */,
+				CE993FC42C665A79004CAB28 /* SingleEventModelView.swift in Sources */,
 				CEF1FDCC2C6299FE00E016A5 /* RowRecipes.swift in Sources */,
 				CEF1FDC42C6299FE00E016A5 /* RecipesService.swift in Sources */,
 				CEF1FDD02C629A3300E016A5 /* IngredientsModelView.swift in Sources */,

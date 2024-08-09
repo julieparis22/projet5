@@ -33,7 +33,7 @@ struct SingleRecipeModelView: View {
                            .font(.largeTitle)
                            .multilineTextAlignment(.center)
                        AddMealView(title: .constant(recipe.title), summary: .constant(recipe.summary))
-                      // AddMealView(title: .constant(recipe.title)
+             
                        AsyncImage(url: URL(string: recipe.image)) { image in
                            image.resizable()
                                 .aspectRatio(contentMode: .fit)

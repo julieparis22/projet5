@@ -62,8 +62,9 @@ struct AddMealView: View {
             if granted {
                 let eventTitle = meal.title
                 let startDate = meal.date
+             
                 let endDate = Calendar.current.date(byAdding: .hour, value: 1, to: meal.date) ?? meal.date
-                let notes = meal.instructions
+                let instructions = meal.instructions
                 
                 calendarManager.addEventToCalendar(title: eventTitle, startDate: startDate, endDate: endDate, instructions: meal.instructions) { success, error in
                     DispatchQueue.main.async {

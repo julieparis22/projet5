@@ -5,9 +5,9 @@
 //  Created by julie ryan on 05/08/2024.
 //
 
+
 import SwiftUI
 import EventKit
-import UIKit
 
 struct CalendarEventsView: View {
     @State private var events: [EKEvent] = []
@@ -19,46 +19,44 @@ struct CalendarEventsView: View {
 
     var body: some View {
         NavigationView {
-            
-        VStack {
-            if !events.isEmpty {
-                List(events, id: \.eventIdentifier) { event in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(event.title)
-                                .font(.headline)
-                            Text(event.notes ?? "Aucune note")
-                            
-                            Text("Début: \(event.startDate, formatter: eventFormatter)")
-                            Text("Fin: \(event.endDate, formatter: eventFormatter)")
-                        }
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            deleteEvent(event)
-                        }) {
-                            Text("Supprimer")
-                                .foregroundColor(.red)
+            VStack {
+                if !events.isEmpty {
+                    List(events, id: \.eventIdentifier) { event in
+                        HStack {
+                            VStack(alignment: .leading) {
+                      
+                                NavigationLink(destination: SingleEventModelView(event: Binding.constant(event)))  {
+                                    Text(event.title)
+                                        .font(.headline)
+                                }
+                               
+                                Text("Début: \(event.startDate, formatter: eventFormatter)")
+                                Text("Fin: \(event.endDate, formatter: eventFormatter)")
+                            }
+                            Spacer()
+                            Button(action: {
+                                deleteEvent(event)
+                            }) {
+                                Text("Supprimer")
+                                    .foregroundColor(.red)
+                            }
                         }
                     }
+                } else if let errorMessage = errorMessage {
+                    Text("Erreur: \(errorMessage)")
+                        .foregroundColor(.red)
+                } else {
+                    Text("Aucun événement trouvé.")
                 }
-            } else if let errorMessage = errorMessage {
-                Text("Erreur: \(errorMessage)")
-                    .foregroundColor(.red)
-            } else {
-                Text("Aucun événement trouvé.")
             }
-        }
-        .onAppear {
-            fetchEvents()
+            .onAppear {
+                fetchEvents()
+            }
+            .navigationTitle("Événements du Calendrier")
         }
     }
-            
-        .navigationTitle("Événements du Calendrier")
-    }
-    
-   func fetchEvents() {
+
+    func fetchEvents() {
         calendarManager.requestCalendarAccess { granted, error in
             if granted {
                 calendarManager.fetchEvents(startDate: startDate, endDate: endDate) { fetchedEvents, error in
@@ -73,7 +71,7 @@ struct CalendarEventsView: View {
             }
         }
     }
-    
+
     private func deleteEvent(_ event: EKEvent) {
         calendarManager.requestCalendarAccess { granted, error in
             if granted {
@@ -89,7 +87,7 @@ struct CalendarEventsView: View {
             }
         }
     }
-    
+
     private var eventFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
@@ -97,7 +95,6 @@ struct CalendarEventsView: View {
         return formatter
     }
 }
-
 
 #Preview {
     CalendarEventsView(startDate: Date(), endDate: Date().addingTimeInterval(3600 * 24 * 30))
