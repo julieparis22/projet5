@@ -10,30 +10,42 @@ import SwiftData
 import Foundation
 import EventKit
 
+
 struct AddMealView: View {
-    @Binding var title: String 
-    @State  var summary: String = ""
-    @State  var date: Date = Date()
-    @State  var ingredients : [IngredientMeal] = []
-    @State  var isMealAdded = false
-    @State  var errorMessage: String?
-    @State  var calendarManager = CalendarManager()
-    @State  var addedMealTitle: String = ""
-    
+    @Binding var title: String
+    @Binding var summary: String
+    @State private var date: Date = Date()
+    @State private var ingredients: [IngredientMeal] = []
+    @State private var isMealAdded = false
+    @State private var errorMessage: String?
+    @State private var calendarManager = CalendarManager()
+    @State private var addedMealTitle: String = ""
     
     @Environment(\.modelContext) var modelContext
     
     var body: some View {
-
-         Button("Ajouter Repas et Événement") {
-                        addMealAndEvent()
-                    }
-        DatePicker("Date", selection: $date, displayedComponents: [.date, .hourAndMinute])
-        if  let errorMessage = errorMessage {
-            Text("Erreur: \(errorMessage)")
-                .foregroundColor(.red)
+        HStack {
+   
+            Button("+") {
+                addMealAndEvent()
+            }.font(.largeTitle)
+            .padding()
+            DatePicker("", selection: $date, displayedComponents: [.date, .hourAndMinute])
+                .padding()
+        
+            
+            if let errorMessage = errorMessage {
+                Text("Erreur: \(errorMessage)")
+                    .foregroundColor(.red)
+                    .padding()
+            }
+            if isMealAdded {
+                Text("👍🏼")
+       
+                    .padding()
+            }
         }
-                 
+        .padding()
     }
     
     private func addMealAndEvent() {
@@ -43,9 +55,7 @@ struct AddMealView: View {
         }
         
         let meal = Meal(date: date, title: title, instructions: summary, ingredients: [IngredientMeal(original: "tomato")])
-                        
-                        
-                        
+        
         modelContext.insert(meal)
         
         calendarManager.requestCalendarAccess { granted, error in
@@ -53,6 +63,7 @@ struct AddMealView: View {
                 let eventTitle = meal.title
                 let startDate = meal.date
                 let endDate = Calendar.current.date(byAdding: .hour, value: 1, to: meal.date) ?? meal.date
+                let notes = meal.instructions
                 
                 calendarManager.addEventToCalendar(title: eventTitle, startDate: startDate, endDate: endDate, instructions: meal.instructions) { success, error in
                     DispatchQueue.main.async {
@@ -61,7 +72,7 @@ struct AddMealView: View {
                             addedMealTitle = eventTitle
                             errorMessage = nil
                             
-                            // Réinitialiser les champs après l'ajout réussi
+                            // Reset fields after successful addition
                             title = ""
                             summary = ""
                             date = Date()
@@ -78,11 +89,19 @@ struct AddMealView: View {
                 }
             }
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                  isMealAdded = true
+                  errorMessage = nil
+              }
     }
+
+    
+    
 }
 
 #Preview {
-    AddMealView(title: .constant(""), ingredients: [IngredientMeal(original: "bob")])
+    AddMealView(title: .constant("Exemple Titre"), summary: .constant("Exemple recette"))
 }
 /*
  

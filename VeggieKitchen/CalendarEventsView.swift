@@ -18,6 +18,8 @@ struct CalendarEventsView: View {
     let endDate: Date
 
     var body: some View {
+        NavigationView {
+            
         VStack {
             if !events.isEmpty {
                 List(events, id: \.eventIdentifier) { event in
@@ -51,10 +53,12 @@ struct CalendarEventsView: View {
         .onAppear {
             fetchEvents()
         }
+    }
+            
         .navigationTitle("Événements du Calendrier")
     }
     
-    private func fetchEvents() {
+   func fetchEvents() {
         calendarManager.requestCalendarAccess { granted, error in
             if granted {
                 calendarManager.fetchEvents(startDate: startDate, endDate: endDate) { fetchedEvents, error in
@@ -94,6 +98,7 @@ struct CalendarEventsView: View {
     }
 }
 
+
 #Preview {
-    CalendarEventsView(startDate: Date(), endDate: Date().addingTimeInterval(3600 * 24 * 7))
+    CalendarEventsView(startDate: Date(), endDate: Date().addingTimeInterval(3600 * 24 * 30))
 }
