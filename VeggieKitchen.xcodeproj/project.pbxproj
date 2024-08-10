@@ -10,6 +10,7 @@
 		CE993FC42C665A79004CAB28 /* SingleEventModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE993FC32C665A79004CAB28 /* SingleEventModelView.swift */; };
 		CEDBD8BE2C63FA2500278B73 /* CalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */; };
 		CEE2A4852C67757A003E2A87 /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2A4842C67757A003E2A87 /* CustomDateFormatter.swift */; };
+		CEE81ED72C67D8FC00FD71A5 /* CalendarAcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE81ED62C67D8FB00FD71A5 /* CalendarAcessView.swift */; };
 		CEF1FD762C6298B900E016A5 /* VeggieKitchenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD752C6298B900E016A5 /* VeggieKitchenApp.swift */; };
 		CEF1FD782C6298B900E016A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD772C6298B900E016A5 /* ContentView.swift */; };
 		CEF1FD7A2C6298B900E016A5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FD792C6298B900E016A5 /* Item.swift */; };
@@ -38,7 +39,7 @@
 		CEF1FDD52C629A4C00E016A5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDD22C629A4C00E016A5 /* MainView.swift */; };
 		CEF1FDD62C629A4C00E016A5 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDD32C629A4C00E016A5 /* Meal.swift */; };
 		CEF1FDD72C629A4C00E016A5 /* CalendarEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDD42C629A4C00E016A5 /* CalendarEventsView.swift */; };
-		CEF1FDD92C629A5200E016A5 /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDD82C629A5200E016A5 /* AddMealView.swift */; };
+		CEF1FDD92C629A5200E016A5 /* AddMealModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDD82C629A5200E016A5 /* AddMealModelView.swift */; };
 		CEF1FDDB2C629A5C00E016A5 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDDA2C629A5C00E016A5 /* RecipesListView.swift */; };
 		CEF1FDE12C629AC600E016A5 /* FakeRecipe.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF1FDDC2C629AC600E016A5 /* FakeRecipe.json */; };
 		CEF1FDE22C629AC600E016A5 /* FakeRecipes.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF1FDDD2C629AC600E016A5 /* FakeRecipes.json */; };
@@ -70,6 +71,7 @@
 		CE993FC32C665A79004CAB28 /* SingleEventModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventModelView.swift; sourceTree = "<group>"; };
 		CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManagerTests.swift; sourceTree = "<group>"; };
 		CEE2A4842C67757A003E2A87 /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
+		CEE81ED62C67D8FB00FD71A5 /* CalendarAcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAcessView.swift; sourceTree = "<group>"; };
 		CEF1FD722C6298B900E016A5 /* VeggieKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeggieKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF1FD752C6298B900E016A5 /* VeggieKitchenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeggieKitchenApp.swift; sourceTree = "<group>"; };
 		CEF1FD772C6298B900E016A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,7 +103,7 @@
 		CEF1FDD22C629A4C00E016A5 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = VeggieKitchen/MainView.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDD32C629A4C00E016A5 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = VeggieKitchen/Model/structures/Meal.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDD42C629A4C00E016A5 /* CalendarEventsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarEventsView.swift; path = VeggieKitchen/CalendarEventsView.swift; sourceTree = SOURCE_ROOT; };
-		CEF1FDD82C629A5200E016A5 /* AddMealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddMealView.swift; path = VeggieKitchen/ModelViewGroup/AddMealView.swift; sourceTree = SOURCE_ROOT; };
+		CEF1FDD82C629A5200E016A5 /* AddMealModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddMealModelView.swift; path = VeggieKitchen/ModelViewGroup/AddMealModelView.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDDA2C629A5C00E016A5 /* RecipesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipesListView.swift; path = VeggieKitchen/ViewGroup/RecipesListView.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDDC2C629AC600E016A5 /* FakeRecipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeRecipe.json; sourceTree = "<group>"; };
 		CEF1FDDD2C629AC600E016A5 /* FakeRecipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeRecipes.json; sourceTree = "<group>"; };
@@ -230,7 +232,6 @@
 				CEF1FDA92C6299FE00E016A5 /* Network */,
 				CEF1FDB02C6299FE00E016A5 /* RecipeManagement */,
 				CEF1FDBC2C6299FE00E016A5 /* structures */,
-				CEE2A4842C67757A003E2A87 /* CustomDateFormatter.swift */,
 			);
 			path = ModelGroup;
 			sourceTree = "<group>";
@@ -241,6 +242,7 @@
 				CEF1FDDA2C629A5C00E016A5 /* RecipesListView.swift */,
 				CEF1FDD42C629A4C00E016A5 /* CalendarEventsView.swift */,
 				CEF1FDD22C629A4C00E016A5 /* MainView.swift */,
+				CEE81ED62C67D8FB00FD71A5 /* CalendarAcessView.swift */,
 			);
 			path = ViewGroup;
 			sourceTree = "<group>";
@@ -248,7 +250,7 @@
 		CEF1FDA52C6299E100E016A5 /* ModelViewGroup */ = {
 			isa = PBXGroup;
 			children = (
-				CEF1FDD82C629A5200E016A5 /* AddMealView.swift */,
+				CEF1FDD82C629A5200E016A5 /* AddMealModelView.swift */,
 				CEF1FDCE2C629A3300E016A5 /* IngredientsModelView.swift */,
 				CEF1FDCF2C629A3300E016A5 /* SingleRecipeModelView.swift */,
 				CE993FC32C665A79004CAB28 /* SingleEventModelView.swift */,
@@ -299,6 +301,7 @@
 		CEF1FDB62C6299FE00E016A5 /* Esthetic */ = {
 			isa = PBXGroup;
 			children = (
+				CEE2A4842C67757A003E2A87 /* CustomDateFormatter.swift */,
 				CEF1FDB42C6299FE00E016A5 /* HTMLTextView.swift */,
 				CEF1FDB52C6299FE00E016A5 /* ImageLoader.swift */,
 			);
@@ -483,7 +486,7 @@
 				CEF1FDC72C6299FE00E016A5 /* HTMLTextView.swift in Sources */,
 				CEF1FDC22C6299FE00E016A5 /* RealRecipesService.swift in Sources */,
 				CEF1FDD72C629A4C00E016A5 /* CalendarEventsView.swift in Sources */,
-				CEF1FDD92C629A5200E016A5 /* AddMealView.swift in Sources */,
+				CEF1FDD92C629A5200E016A5 /* AddMealModelView.swift in Sources */,
 				CE993FC42C665A79004CAB28 /* SingleEventModelView.swift in Sources */,
 				CEE2A4852C67757A003E2A87 /* CustomDateFormatter.swift in Sources */,
 				CEF1FDCC2C6299FE00E016A5 /* RowRecipes.swift in Sources */,
@@ -494,6 +497,7 @@
 				CEF1FDC12C6299FE00E016A5 /* GetSingleRecipe.swift in Sources */,
 				CEF1FD762C6298B900E016A5 /* VeggieKitchenApp.swift in Sources */,
 				CEF1FDC52C6299FE00E016A5 /* CalendarManager .swift in Sources */,
+				CEE81ED72C67D8FC00FD71A5 /* CalendarAcessView.swift in Sources */,
 				CEF1FDCA2C6299FE00E016A5 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

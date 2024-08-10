@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-
+import EventKit
 struct MainView: View {
 
     let recipeService = RealRecipesService()
     var body: some View {
+        CalendarAccessView()
 
         TabView {
             RecipesListView(recipeService: recipeService)

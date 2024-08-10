@@ -9,7 +9,7 @@ import SwiftData
 import Foundation
 import EventKit
 
-struct AddMealView: View {
+struct AddMealModelView: View {
     @Binding var title: String
     @Binding var instructions: String
     @State private var date: Date = Date()
@@ -104,6 +104,6 @@ struct AddMealView: View {
 }
 
 #Preview {
-    AddMealView(title: .constant("Exemple Titre"), instructions: .constant("Exemple recette"), ingredients: [IngredientMeal(original: "tomato")])
+    AddMealModelView(title: .constant("Exemple Titre"), instructions: .constant("Exemple recette"), ingredients: [IngredientMeal(original: "tomato")])
 }
 

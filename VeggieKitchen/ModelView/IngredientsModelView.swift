@@ -22,7 +22,7 @@ struct IngredientsModelView: View {
       
     }
 }
-//}
+
 
 #Preview {
     IngredientsModelView(ingredient: .constant(Ingredient(id: 22, original: "banana")))

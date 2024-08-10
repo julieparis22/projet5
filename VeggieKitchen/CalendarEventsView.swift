@@ -11,7 +11,7 @@ import EventKit
 
 struct CalendarEventsView: View {
     @State private var events: [EKEvent] = []
-    @State private var calendarManager = CalendarManager()
+    @StateObject private var calendarManager = CalendarManager()
     @State private var errorMessage: String?
     let startDate: Date
     let endDate: Date
@@ -28,8 +28,6 @@ struct CalendarEventsView: View {
                                         .font(.headline)
                                     Text(" \(event.startDate, formatter: customDateFormatter)")
                          
-                                
-                                    
                                 }
                                 Spacer()
                                 

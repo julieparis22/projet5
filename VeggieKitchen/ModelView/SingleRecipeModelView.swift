@@ -1,8 +1,6 @@
 //
 //  SingleRecipeModelView.swift
 //  VeggieKitchen
-//    HTMLTextView(htmlContent: wrapHtmlContent(recipe.summary))
-//.frame(height: webViewHeight)
 //  Created by julie ryan on 01/08/2024.
 //
 import SwiftUI
@@ -36,7 +34,7 @@ struct SingleRecipeModelView: View {
                        }
         
                      
-                       AddMealView(
+                       AddMealModelView(
                                             title: .constant(recipe.title),
                                             instructions: .constant(recipe.instructions),
                                             ingredients: recipe.extendedIngredients.map { IngredientMeal(original: $0.original) }
@@ -82,6 +80,7 @@ struct SingleRecipeModelView: View {
                            HStack {
                                Spacer()
                                HTMLTextView(htmlContent: recipe.instructions, dynamicHeight: $webViewHeight)
+                                   .padding()
                                    .frame(height: webViewHeight)
                                Spacer()
                            }
