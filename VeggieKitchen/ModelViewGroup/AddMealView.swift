@@ -11,9 +11,10 @@ import EventKit
 
 struct AddMealView: View {
     @Binding var title: String
-    @Binding var summary: String
+    @Binding var instructions: String
     @State private var date: Date = Date()
-    @State private var ingredients: [IngredientMeal] = []
+    private let currentDate = Date()
+    var ingredients: [IngredientMeal]
     @State private var isMealAdded = false
     @State private var errorMessage: String?
     @State private var calendarManager = CalendarManager()
@@ -28,16 +29,24 @@ struct AddMealView: View {
             }.font(.largeTitle)
             .padding()
             
-            DatePicker("", selection: $date, displayedComponents: [.date, .hourAndMinute])
-                .padding()
+            DatePicker(
+                      " ",
+                      selection: $date,
+                      in: currentDate...,
+                      displayedComponents: [.date, .hourAndMinute]
+                  )
+                  .padding()
         
             if let errorMessage = errorMessage {
-                Text("Erreur: \(errorMessage)")
+                Text("Error: \(errorMessage)")
                     .foregroundColor(.red)
                     .padding()
             }
             if isMealAdded {
-                Text("👍🏼")
+                Text("👍🏼 !")
+                    .padding()
+            }else {
+                Text("🥣 ? ")
                     .padding()
             }
         }
@@ -46,11 +55,13 @@ struct AddMealView: View {
     
     private func addMealAndEvent() {
         guard !title.isEmpty else {
-            errorMessage = "Le titre du repas ne peut pas être vide."
+            errorMessage = "You need to give a title."
             return
         }
+
         
-        let meal = Meal(date: date, title: title, instructions: summary, ingredients: [IngredientMeal(original: "tomato")])
+        let meal = Meal(date: date, title: title, instructions: instructions,  ingredients: ingredients)
+    
         
         modelContext.insert(meal)
         
@@ -69,7 +80,7 @@ struct AddMealView: View {
                             
                             // Réinitialiser les champs après l'ajout réussi
                             title = ""
-                            summary = ""
+                            instructions = ""
                             date = Date()
                         } else {
                             isMealAdded = false
@@ -88,28 +99,6 @@ struct AddMealView: View {
 }
 
 #Preview {
-    AddMealView(title: .constant("Exemple Titre"), summary: .constant("Exemple recette"))
+    AddMealView(title: .constant("Exemple Titre"), instructions: .constant("Exemple recette"), ingredients: [IngredientMeal(original: "tomato")])
 }
-/*
- 
- Section(header: Text("Détails du Repas")) {
-     TextField("Titre du repas", text: $title)
-     DatePicker("Date", selection: $date, displayedComponents: [.date, .hourAndMinute])
-     TextEditor(text: $summary)
-         .frame(height: 100)
-         .overlay(
-             RoundedRectangle(cornerRadius: 8)
-                 .stroke(Color.secondary.opacity(0.2), lineWidth: 1))
-         .overlay(Group {
-                 if summary.isEmpty {
-                     Text("Instructions du repas")
-                         .foregroundColor(.secondary)
-                         .padding(.horizontal, 4)
-                         .padding(.vertical, 8)
-                 }
-             },
-             alignment: .topLeading
-         )
- }
- 
- **/
+

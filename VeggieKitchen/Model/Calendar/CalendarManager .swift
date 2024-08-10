@@ -50,14 +50,17 @@ struct CalendarManager {
         // Préparer les notes de l'événement
         
         
+        
         var notes = ""
+        
         if !ingredients.isEmpty {
             let ingredientsList = ingredients.map { $0.original }.joined(separator: ", ")
             notes += "\n\nIngrédients: \(ingredientsList)"
         }
-        notes += "\n\nInstructions:\n"
+        
+    //    notes += "\n\nInstructions:\n"
         notes +=  instructions
-     
+
         event.notes = notes
         event.calendar = eventStore.defaultCalendarForNewEvents
 

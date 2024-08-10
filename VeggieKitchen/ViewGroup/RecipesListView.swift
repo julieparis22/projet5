@@ -10,7 +10,6 @@ import SwiftUI
 struct RecipesListView: View {
     @StateObject private var loader: RecipeListLoader
     
-    // Initialisateur pour l'injection de dépendances
     init(recipeService: RecipesService) {
         _loader = StateObject(wrappedValue: RecipeListLoader(recipeService: recipeService))
     }
@@ -59,7 +58,4 @@ struct RecipesListView: View {
 #Preview {
     RecipesListView(recipeService: RealRecipesService())
 }
-/*#Preview {
- RecipeListView(recipeService: MockRecipesServiceForView())
-}
-**/
+

@@ -23,38 +23,69 @@ struct SingleRecipeModelView: View {
                            .progressViewStyle(CircularProgressViewStyle())
                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                    } else if let error = recipeDetails.errorMessage {
-                       Text("Error: \(error)")
+                       Text("Erreur: \(error)")
                            .foregroundColor(.red)
                            .padding()
                    } else if let recipe = recipeDetails.recipe {
-             
-        
-                       Text(recipe.title)
-                           .font(.largeTitle)
-                           .multilineTextAlignment(.center)
-                       AddMealView(title: .constant(recipe.title), summary: .constant(recipe.instructions))
-             
-                       AsyncImage(url: URL(string: recipe.image)) { image in
-                           image.resizable()
-                                .aspectRatio(contentMode: .fit)
-                       } placeholder: {
-                           ProgressView()
+                       HStack {
+                           Spacer()
+                           Text(recipe.title)
+                               .font(.largeTitle)
+                               .multilineTextAlignment(.center)
+                           Spacer()
                        }
+        
+                     
+                       AddMealView(
+                                            title: .constant(recipe.title),
+                                            instructions: .constant(recipe.instructions),
+                                            ingredients: recipe.extendedIngredients.map { IngredientMeal(original: $0.original) }
+                                        )
+                       HStack {
+                           Spacer()
+                           AsyncImage(url: URL(string: recipe.image)) { image in
+                               image.resizable()
+                                    .aspectRatio(contentMode: .fit)
+                           } placeholder: {
+                               ProgressView()
+                           }
+                           Spacer()
+                       }
+               
                        .frame(height: 200)
-                       Text("Ready in \(recipe.readyInMinutes) minutes")
-                           .font(.subheadline)
+                       
+                       HStack {
+                           Spacer()
+                           Text("⏲ \(recipe.readyInMinutes) minutes")
+                               .font(.subheadline)
+                           Spacer()
+                       }
+                      
                        VStack(alignment: .leading, spacing: 8) {
-                           Text("Ingredients")
+                           HStack {
+                               Spacer()
+                               Text("Ingredients")
+                               Spacer()
+                           }
+                        
                                .font(.headline)
                            ForEach(recipe.extendedIngredients, id: \.id) { ingredient in
                                IngredientsModelView(ingredient: .constant(ingredient))
                            }
                        }
                        VStack(alignment: .leading, spacing: 8) {
-                           Text("Instructions")
-                               .font(.headline)
-                           HTMLTextView(htmlContent: recipe.instructions, dynamicHeight: $webViewHeight)
-                               .frame(height: webViewHeight)
+                           HStack {
+                               Spacer()
+                               Text("instructions :").fontWeight(.bold)
+                               Spacer()
+                           }
+                           HStack {
+                               Spacer()
+                               HTMLTextView(htmlContent: recipe.instructions, dynamicHeight: $webViewHeight)
+                                   .frame(height: webViewHeight)
+                               Spacer()
+                           }
+                       
                        }
                    }
                }

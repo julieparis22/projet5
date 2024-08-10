@@ -27,7 +27,7 @@ struct CalendarEventsView: View {
                                     Text(event.title)
                                         .font(.headline)
                                     Text(" \(event.startDate, formatter: customDateFormatter)")
-                                //    Text("Fin: \(event.endDate, formatter: customDateFormatter)")
+                         
                                 
                                     
                                 }
@@ -39,7 +39,7 @@ struct CalendarEventsView: View {
                             deleteEvent(event)
                         }) {
                             HStack {
-                                Text("Effacer")
+                                Text("Delete")
                                 Text("🗑️")
                                     .foregroundColor(.red)
                             }
@@ -48,16 +48,16 @@ struct CalendarEventsView: View {
                    
                     }
                 } else if let errorMessage = errorMessage {
-                    Text("Erreur: \(errorMessage)")
+                    Text("Error: \(errorMessage)")
                         .foregroundColor(.red)
                 } else {
-                    Text("Aucun événement trouvé.")
+                    Text("No event found")
                 }
             }
             .onAppear {
                 fetchEvents()
             }
-            .navigationTitle("Événements du Calendrier")
+            .navigationTitle("Meals by day")
         }
     }
     
@@ -68,22 +68,15 @@ struct CalendarEventsView: View {
                       if success {
                           fetchEvents()
                       } else {
-                          errorMessage = error?.localizedDescription ?? "Erreur lors de la suppression de l'événement."
+                          errorMessage = error?.localizedDescription ?? "Error while deleting."
                       }
                   }
               } else {
-                  errorMessage = error?.localizedDescription ?? "Accès au calendrier refusé."
+                  errorMessage = error?.localizedDescription ?? "Access denied."
               }
           }
       }
     
-    
-    
-    
-    
-    
-    
-
     func fetchEvents() {
         calendarManager.requestCalendarAccess { granted, error in
             if granted {
@@ -95,7 +88,7 @@ struct CalendarEventsView: View {
                     }
                 }
             } else {
-                errorMessage = error?.localizedDescription ?? "Accès au calendrier refusé."
+                errorMessage = error?.localizedDescription ?? "access denied."
             }
         }
     }
@@ -107,30 +100,3 @@ struct CalendarEventsView: View {
 #Preview {
     CalendarEventsView(startDate: Date(), endDate: Date().addingTimeInterval(3600 * 24 * 30))
 }
-/**
- 
-
- 
- private func deleteEvent(_ event: EKEvent) {
-       calendarManager.requestCalendarAccess { granted, error in
-           if granted {
-               calendarManager.deleteEvent(event) { success, error in
-                   if success {
-                       fetchEvents() // Recharger les événements après la suppression
-                   } else {
-                       errorMessage = error?.localizedDescription ?? "Erreur lors de la suppression de l'événement."
-                   }
-               }
-           } else {
-               errorMessage = error?.localizedDescription ?? "Accès au calendrier refusé."
-           }
- 
- 
- Button(action: {
-     deleteEvent(event)
- }) {
-     Text("Supprimer")
-         .foregroundColor(.red)
- }
- 
- **/

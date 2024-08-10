@@ -12,13 +12,11 @@ struct MainView: View {
     let recipeService = RealRecipesService()
     var body: some View {
 
- 
-      
         TabView {
             RecipesListView(recipeService: recipeService)
                             .tabItem {
                                 Image(systemName: "list.bullet")
-                                Text("Recettes")
+                                Text("Recipes")
                             }
             
             CalendarEventsView(
@@ -35,25 +33,10 @@ struct MainView: View {
    
             }
 
-  //  RecipesListView()
+
     }
 }
 
 #Preview {
     MainView()
 }
-/**
- 
- 
-         CalendarEventsView(
-             
-             startDate: Calendar.current.date(byAdding: .day, value: -7, to: Date()) ?? Date(),
-             
-             endDate: Calendar.current.date(byAdding: .day, value: 7, to: Date()) ?? Date()
-             
-         )  .tabItem {
-             Image(systemName: "list.bullet")
-             Text("Calendar")
-                 }
- 
- */

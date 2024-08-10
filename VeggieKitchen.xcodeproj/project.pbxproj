@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE993FBE2C664E5F004CAB28 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE993FBD2C664E5F004CAB28 /* TestView.swift */; };
 		CE993FC42C665A79004CAB28 /* SingleEventModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE993FC32C665A79004CAB28 /* SingleEventModelView.swift */; };
 		CEDBD8BE2C63FA2500278B73 /* CalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */; };
 		CEE2A4852C67757A003E2A87 /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2A4842C67757A003E2A87 /* CustomDateFormatter.swift */; };
@@ -68,7 +67,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE993FBD2C664E5F004CAB28 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		CE993FC32C665A79004CAB28 /* SingleEventModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventModelView.swift; sourceTree = "<group>"; };
 		CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManagerTests.swift; sourceTree = "<group>"; };
 		CEE2A4842C67757A003E2A87 /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				CEF1FDDA2C629A5C00E016A5 /* RecipesListView.swift */,
 				CEF1FDD42C629A4C00E016A5 /* CalendarEventsView.swift */,
 				CEF1FDD22C629A4C00E016A5 /* MainView.swift */,
-				CE993FBD2C664E5F004CAB28 /* TestView.swift */,
 			);
 			path = ViewGroup;
 			sourceTree = "<group>";
@@ -496,7 +493,6 @@
 				CEF1FD7A2C6298B900E016A5 /* Item.swift in Sources */,
 				CEF1FDC12C6299FE00E016A5 /* GetSingleRecipe.swift in Sources */,
 				CEF1FD762C6298B900E016A5 /* VeggieKitchenApp.swift in Sources */,
-				CE993FBE2C664E5F004CAB28 /* TestView.swift in Sources */,
 				CEF1FDC52C6299FE00E016A5 /* CalendarManager .swift in Sources */,
 				CEF1FDCA2C6299FE00E016A5 /* Recipe.swift in Sources */,
 			);
