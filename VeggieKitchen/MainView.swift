@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var title = "tomato"
+
     let recipeService = RealRecipesService()
     var body: some View {
-   Text("main view")
+
  
       
         TabView {
             RecipesListView(recipeService: recipeService)
                             .tabItem {
-                                Image(systemName: "plus.circle.fill")
-                                Text("Ajouter element")
+                                Image(systemName: "list.bullet")
+                                Text("Recettes")
                             }
             
             CalendarEventsView(
@@ -28,8 +28,8 @@ struct MainView: View {
                 endDate: Calendar.current.date(byAdding: .day, value: 30, to: Date()) ?? Date()
                 
             )  .tabItem {
-                Image(systemName: "list.bullet")
-                Text("Calendar")
+                Image(systemName: "calendar")
+                Text("Agenda")
                     }
                         
    

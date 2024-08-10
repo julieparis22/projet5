@@ -40,17 +40,27 @@ struct CalendarManager {
     }
     
     // Fonction pour ajouter un événement au calendrier
-    func addEventToCalendar(title: String, startDate: Date, endDate: Date, instructions: String, completion: @escaping (Bool, Error?) -> Void) {
+    func addEventToCalendar(title: String, startDate: Date, endDate: Date, instructions: String, ingredients: [IngredientMeal], completion: @escaping (Bool, Error?) -> Void) {
         // Créer un nouvel événement
         let event = EKEvent(eventStore: eventStore)
         event.title = title
-    
         event.startDate = startDate
         event.endDate = endDate
-        event.notes = instructions
-        event.calendar = eventStore.defaultCalendarForNewEvents
-      
         
+        // Préparer les notes de l'événement
+        
+        
+        var notes = ""
+        if !ingredients.isEmpty {
+            let ingredientsList = ingredients.map { $0.original }.joined(separator: ", ")
+            notes += "\n\nIngrédients: \(ingredientsList)"
+        }
+        notes += "\n\nInstructions:\n"
+        notes +=  instructions
+     
+        event.notes = notes
+        event.calendar = eventStore.defaultCalendarForNewEvents
+
         do {
             // Sauvegarder l'événement
             try eventStore.save(event, span: .thisEvent)

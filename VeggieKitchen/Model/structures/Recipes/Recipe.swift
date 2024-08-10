@@ -13,6 +13,6 @@ struct Recipe : Codable {
     let readyInMinutes : Int
     let image: String
     var imageType: String = "jpg"
-    let summary : String
+    let instructions : String
   
     }

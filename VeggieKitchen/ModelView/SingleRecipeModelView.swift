@@ -32,7 +32,7 @@ struct SingleRecipeModelView: View {
                        Text(recipe.title)
                            .font(.largeTitle)
                            .multilineTextAlignment(.center)
-                       AddMealView(title: .constant(recipe.title), summary: .constant(recipe.summary))
+                       AddMealView(title: .constant(recipe.title), summary: .constant(recipe.instructions))
              
                        AsyncImage(url: URL(string: recipe.image)) { image in
                            image.resizable()
@@ -53,7 +53,7 @@ struct SingleRecipeModelView: View {
                        VStack(alignment: .leading, spacing: 8) {
                            Text("Instructions")
                                .font(.headline)
-                           HTMLTextView(htmlContent: recipe.summary, dynamicHeight: $webViewHeight)
+                           HTMLTextView(htmlContent: recipe.instructions, dynamicHeight: $webViewHeight)
                                .frame(height: webViewHeight)
                        }
                    }

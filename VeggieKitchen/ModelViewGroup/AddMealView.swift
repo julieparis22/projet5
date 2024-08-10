@@ -4,12 +4,10 @@
 //
 //  Created by julie ryan on 05/08/2024.
 //
-
 import SwiftUI
 import SwiftData
 import Foundation
 import EventKit
-
 
 struct AddMealView: View {
     @Binding var title: String
@@ -25,15 +23,14 @@ struct AddMealView: View {
     
     var body: some View {
         HStack {
-   
             Button("+") {
                 addMealAndEvent()
             }.font(.largeTitle)
             .padding()
+            
             DatePicker("", selection: $date, displayedComponents: [.date, .hourAndMinute])
                 .padding()
         
-            
             if let errorMessage = errorMessage {
                 Text("Erreur: \(errorMessage)")
                     .foregroundColor(.red)
@@ -41,7 +38,6 @@ struct AddMealView: View {
             }
             if isMealAdded {
                 Text("👍🏼")
-       
                     .padding()
             }
         }
@@ -62,18 +58,16 @@ struct AddMealView: View {
             if granted {
                 let eventTitle = meal.title
                 let startDate = meal.date
-             
                 let endDate = Calendar.current.date(byAdding: .hour, value: 1, to: meal.date) ?? meal.date
-                let instructions = meal.instructions
                 
-                calendarManager.addEventToCalendar(title: eventTitle, startDate: startDate, endDate: endDate, instructions: meal.instructions) { success, error in
+                calendarManager.addEventToCalendar(title: eventTitle, startDate: startDate, endDate: endDate, instructions: meal.instructions, ingredients: meal.ingredients) { success, error in
                     DispatchQueue.main.async {
                         if success {
                             isMealAdded = true
                             addedMealTitle = eventTitle
                             errorMessage = nil
                             
-                            // Reset fields after successful addition
+                            // Réinitialiser les champs après l'ajout réussi
                             title = ""
                             summary = ""
                             date = Date()
@@ -90,15 +84,7 @@ struct AddMealView: View {
                 }
             }
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                  isMealAdded = true
-                  errorMessage = nil
-              }
     }
-
-    
-    
 }
 
 #Preview {
