@@ -13,7 +13,12 @@ struct AddMealView: View {
     @Binding var title: String
     @Binding var instructions: String
     @State private var date: Date = Date()
-    private let currentDate = Date()
+    var currentDate = Date()
+  
+     private var endDate: Date {
+         Calendar.current.date(byAdding: .month, value: 1, to: currentDate) ?? currentDate
+     }
+
     var ingredients: [IngredientMeal]
     @State private var isMealAdded = false
     @State private var errorMessage: String?
@@ -30,12 +35,12 @@ struct AddMealView: View {
             .padding()
             
             DatePicker(
-                      " ",
-                      selection: $date,
-                      in: currentDate...,
-                      displayedComponents: [.date, .hourAndMinute]
-                  )
-                  .padding()
+                           " ",
+                           selection: $date,
+                           in: currentDate...endDate, // Plage de dates
+                           displayedComponents: [.date, .hourAndMinute]
+                       )
+                       .padding()
         
             if let errorMessage = errorMessage {
                 Text("Error: \(errorMessage)")
@@ -60,7 +65,7 @@ struct AddMealView: View {
         }
 
         
-        let meal = Meal(date: date, title: title, instructions: instructions,  ingredients: ingredients)
+        let meal = Meal(date: date, title: title, instructions: instructions,  extendedIngredients: ingredients)
     
         
         modelContext.insert(meal)
@@ -77,20 +82,20 @@ struct AddMealView: View {
                             isMealAdded = true
                             addedMealTitle = eventTitle
                             errorMessage = nil
-                            
-                            // Réinitialiser les champs après l'ajout réussi
+                 
                             title = ""
                             instructions = ""
                             date = Date()
+                            
                         } else {
                             isMealAdded = false
-                            errorMessage = error?.localizedDescription ?? "Erreur inconnue lors de l'ajout de l'événement."
+                            errorMessage = error?.localizedDescription ?? "Error while adding event."
                         }
                     }
                 }
             } else {
                 DispatchQueue.main.async {
-                    errorMessage = error?.localizedDescription ?? "Accès au calendrier refusé."
+                    errorMessage = error?.localizedDescription ?? "Acces denied."
                     isMealAdded = false
                 }
             }

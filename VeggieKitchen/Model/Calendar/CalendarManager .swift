@@ -58,7 +58,7 @@ struct CalendarManager {
             notes += "\n\nIngrédients: \(ingredientsList)"
         }
         
-    //    notes += "\n\nInstructions:\n"
+        notes += "\n\nInstructions:\n"
         notes +=  instructions
 
         event.notes = notes

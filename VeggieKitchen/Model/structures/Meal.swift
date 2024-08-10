@@ -19,11 +19,11 @@ final class Meal {
     var title : String
     var instructions : String
     var ingredients : [IngredientMeal]
-    init(date: Date, title: String, instructions: String, ingredients: [IngredientMeal]) {
+    init(date: Date, title: String, instructions: String, extendedIngredients: [IngredientMeal]) {
         self.date = date
         self.title = title
         self.instructions = instructions
-        self.ingredients = ingredients
+        self.ingredients = extendedIngredients
     }
     
     
