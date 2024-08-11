@@ -27,7 +27,6 @@
 		CEF1FDC42C6299FE00E016A5 /* RecipesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDAF2C6299FE00E016A5 /* RecipesService.swift */; };
 		CEF1FDC52C6299FE00E016A5 /* CalendarManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDB12C6299FE00E016A5 /* CalendarManager .swift */; };
 		CEF1FDC62C6299FE00E016A5 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDB22C6299FE00E016A5 /* CalendarViewController.swift */; };
-		CEF1FDC72C6299FE00E016A5 /* HTMLTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDB42C6299FE00E016A5 /* HTMLTextView.swift */; };
 		CEF1FDC82C6299FE00E016A5 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDB52C6299FE00E016A5 /* ImageLoader.swift */; };
 		CEF1FDC92C6299FE00E016A5 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDB72C6299FE00E016A5 /* Ingredient.swift */; };
 		CEF1FDCA2C6299FE00E016A5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDB82C6299FE00E016A5 /* Recipe.swift */; };
@@ -36,7 +35,7 @@
 		CEF1FDCD2C6299FE00E016A5 /* IngredientMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDBD2C6299FE00E016A5 /* IngredientMeal.swift */; };
 		CEF1FDD02C629A3300E016A5 /* IngredientsModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDCE2C629A3300E016A5 /* IngredientsModelView.swift */; };
 		CEF1FDD12C629A3300E016A5 /* SingleRecipeModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDCF2C629A3300E016A5 /* SingleRecipeModelView.swift */; };
-		CEF1FDD52C629A4C00E016A5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDD22C629A4C00E016A5 /* MainView.swift */; };
+		CEF1FDD52C629A4C00E016A5 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDD22C629A4C00E016A5 /* MainTabView.swift */; };
 		CEF1FDD62C629A4C00E016A5 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDD32C629A4C00E016A5 /* Meal.swift */; };
 		CEF1FDD72C629A4C00E016A5 /* CalendarEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDD42C629A4C00E016A5 /* CalendarEventsView.swift */; };
 		CEF1FDD92C629A5200E016A5 /* AddMealModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1FDD82C629A5200E016A5 /* AddMealModelView.swift */; };
@@ -91,7 +90,6 @@
 		CEF1FDAF2C6299FE00E016A5 /* RecipesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesService.swift; sourceTree = "<group>"; };
 		CEF1FDB12C6299FE00E016A5 /* CalendarManager .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CalendarManager .swift"; sourceTree = "<group>"; };
 		CEF1FDB22C6299FE00E016A5 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		CEF1FDB42C6299FE00E016A5 /* HTMLTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLTextView.swift; sourceTree = "<group>"; };
 		CEF1FDB52C6299FE00E016A5 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		CEF1FDB72C6299FE00E016A5 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		CEF1FDB82C6299FE00E016A5 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -100,7 +98,7 @@
 		CEF1FDBD2C6299FE00E016A5 /* IngredientMeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngredientMeal.swift; path = VeggieKitchen/Model/structures/IngredientMeal.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDCE2C629A3300E016A5 /* IngredientsModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngredientsModelView.swift; path = VeggieKitchen/ModelView/IngredientsModelView.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDCF2C629A3300E016A5 /* SingleRecipeModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleRecipeModelView.swift; path = VeggieKitchen/ModelView/SingleRecipeModelView.swift; sourceTree = SOURCE_ROOT; };
-		CEF1FDD22C629A4C00E016A5 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = VeggieKitchen/MainView.swift; sourceTree = SOURCE_ROOT; };
+		CEF1FDD22C629A4C00E016A5 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabView.swift; path = VeggieKitchen/MainTabView.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDD32C629A4C00E016A5 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = VeggieKitchen/Model/structures/Meal.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDD42C629A4C00E016A5 /* CalendarEventsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarEventsView.swift; path = VeggieKitchen/CalendarEventsView.swift; sourceTree = SOURCE_ROOT; };
 		CEF1FDD82C629A5200E016A5 /* AddMealModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddMealModelView.swift; path = VeggieKitchen/ModelViewGroup/AddMealModelView.swift; sourceTree = SOURCE_ROOT; };
@@ -241,7 +239,7 @@
 			children = (
 				CEF1FDDA2C629A5C00E016A5 /* RecipesListView.swift */,
 				CEF1FDD42C629A4C00E016A5 /* CalendarEventsView.swift */,
-				CEF1FDD22C629A4C00E016A5 /* MainView.swift */,
+				CEF1FDD22C629A4C00E016A5 /* MainTabView.swift */,
 				CEE81ED62C67D8FB00FD71A5 /* CalendarAcessView.swift */,
 			);
 			path = ViewGroup;
@@ -302,7 +300,6 @@
 			isa = PBXGroup;
 			children = (
 				CEE2A4842C67757A003E2A87 /* CustomDateFormatter.swift */,
-				CEF1FDB42C6299FE00E016A5 /* HTMLTextView.swift */,
 				CEF1FDB52C6299FE00E016A5 /* ImageLoader.swift */,
 			);
 			path = Esthetic;
@@ -479,11 +476,10 @@
 				CEF1FDC92C6299FE00E016A5 /* Ingredient.swift in Sources */,
 				CEF1FDCB2C6299FE00E016A5 /* Recipes.swift in Sources */,
 				CEF1FD782C6298B900E016A5 /* ContentView.swift in Sources */,
-				CEF1FDD52C629A4C00E016A5 /* MainView.swift in Sources */,
+				CEF1FDD52C629A4C00E016A5 /* MainTabView.swift in Sources */,
 				CEF1FDC32C6299FE00E016A5 /* RecipeListLoader.swift in Sources */,
 				CEF1FDBE2C6299FE00E016A5 /* MockRecipesService.swift in Sources */,
 				CEF1FDBF2C6299FE00E016A5 /* NetWorking.swift in Sources */,
-				CEF1FDC72C6299FE00E016A5 /* HTMLTextView.swift in Sources */,
 				CEF1FDC22C6299FE00E016A5 /* RealRecipesService.swift in Sources */,
 				CEF1FDD72C629A4C00E016A5 /* CalendarEventsView.swift in Sources */,
 				CEF1FDD92C629A5200E016A5 /* AddMealModelView.swift in Sources */,
@@ -669,6 +665,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"VeggieKitchen/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "\"autorise access to calendar\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -697,6 +694,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"VeggieKitchen/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "\"autorise access to calendar\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

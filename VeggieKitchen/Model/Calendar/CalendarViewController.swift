@@ -31,7 +31,7 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         setupTableView()
-        fetchEvents()
+        requestCalendarAccess()
     }
     
     private func setupTableView() {
@@ -41,34 +41,41 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(tableView)
         
-        // Registering cell with subtitle style
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "EventCell")
     }
     
-    private func fetchEvents() {
-        calendarManager.requestCalendarAccess { granted, error in
-            if granted {
-                self.calendarManager.fetchEvents(startDate: self.startDate, endDate: self.endDate) { fetchedEvents, error in
-                    if let error = error {
-                        self.errorMessage = error.localizedDescription
-                    } else {
-                        self.events = fetchedEvents ?? []
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                        }
-                    }
-                }
-            } else {
-                self.errorMessage = error?.localizedDescription ?? "Accès au calendrier refusé."
-                DispatchQueue.main.async {
-                    self.showErrorAlert()
+    private func requestCalendarAccess() {
+        calendarManager.requestCalendarAccess { [weak self] granted, error in
+            guard let self = self else { return }
+            
+            DispatchQueue.main.async {
+                if granted {
+                    self.fetchEvents()
+                } else {
+                    let errorMessage = error?.localizedDescription ?? "Accès au calendrier refusé."
+                    self.showErrorAlert(message: errorMessage)
                 }
             }
         }
     }
     
-    private func showErrorAlert() {
-        let alert = UIAlertController(title: "Erreur", message: errorMessage, preferredStyle: .alert)
+    private func fetchEvents() {
+        calendarManager.fetchEvents(startDate: startDate, endDate: endDate) { [weak self] fetchedEvents, error in
+            guard let self = self else { return }
+            
+            DispatchQueue.main.async {
+                if let error = error {
+                    self.showErrorAlert(message: error.localizedDescription)
+                } else {
+                    self.events = fetchedEvents ?? []
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    private func showErrorAlert(message: String) {
+        let alert = UIAlertController(title: "Erreur", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
@@ -105,13 +112,13 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
         if editingStyle == .delete {
             let eventToDelete = events[indexPath.row]
             calendarManager.deleteEvent(eventToDelete) { success, error in
-                if success {
-                    self.events.remove(at: indexPath.row)
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    if success {
+                        self.events.remove(at: indexPath.row)
                         tableView.deleteRows(at: [indexPath], with: .fade)
+                    } else {
+                        self.showErrorAlert(message: "Erreur lors de la suppression de l'événement: \(error?.localizedDescription ?? "Erreur inconnue")")
                     }
-                } else {
-                    print("Erreur lors de la suppression de l'événement: \(error?.localizedDescription ?? "Unknown error")")
                 }
             }
         }

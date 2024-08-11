@@ -25,7 +25,7 @@ struct VeggieKitchenApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainTabView()
         }
         .modelContainer(sharedModelContainer)
     }

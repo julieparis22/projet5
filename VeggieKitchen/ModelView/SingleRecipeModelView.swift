@@ -79,9 +79,8 @@ struct SingleRecipeModelView: View {
                            }
                            HStack {
                                Spacer()
-                               HTMLTextView(htmlContent: recipe.instructions, dynamicHeight: $webViewHeight)
-                                   .padding()
-                                   .frame(height: webViewHeight)
+                               Text("\(recipe.instructions)")
+                    
                                Spacer()
                            }
                        

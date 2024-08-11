@@ -12,31 +12,28 @@ import EventKit
 
 class CalendarManager: ObservableObject {
     let eventStore = EKEventStore()
+     
+     func checkCalendarAuthorizationStatus() -> EKAuthorizationStatus {
+         return EKEventStore.authorizationStatus(for: .event)
+     }
+
     
-    func checkCalendarAuthorizationStatus() -> EKAuthorizationStatus {
-           return EKEventStore.authorizationStatus(for: .event)
-       }
     
     func requestCalendarAccess(completion: @escaping (Bool, Error?) -> Void) {
-        let status = EKEventStore.authorizationStatus(for: .event)
-        
-        switch status {
-        case .notDetermined:
-            eventStore.requestFullAccessToEvents { granted, error in
-                DispatchQueue.main.async {
-                    completion(granted, error)
-                }
-            }
-        case .authorized, .fullAccess:
-            completion(true, nil)
-        case .denied, .restricted:
-            completion(false, nil)
-        case .writeOnly:
-            completion(true, nil)  // You might want to handle this differently based on your app's needs
-        @unknown default:
-            completion(false, nil)
-        }
-    }
+          if #available(iOS 17.0, *) {
+              eventStore.requestFullAccessToEvents { granted, error in
+                  DispatchQueue.main.async {
+                      completion(granted, error)
+                  }
+              }
+          } else {
+              eventStore.requestAccess(to: .event) { granted, error in
+                  DispatchQueue.main.async {
+                      completion(granted, error)
+                  }
+              }
+          }
+      }
     
     func addEventToCalendar(title: String, startDate: Date, endDate: Date, instructions: String, ingredients: [IngredientMeal], completion: @escaping (Bool, Error?) -> Void) {
         let event = EKEvent(eventStore: eventStore)
@@ -76,3 +73,36 @@ class CalendarManager: ObservableObject {
         }
     }
 }
+
+
+
+/*
+ 
+ 
+ func requestCalendarAccess(completion: @escaping (Bool, Error?) -> Void) {
+     let status = EKEventStore.authorizationStatus(for: .event)
+     
+     switch status {
+     case .notDetermined:
+         eventStore.requestFullAccessToEvents { granted, error in
+             DispatchQueue.main.async {
+                 completion(granted, error)
+             }
+         }
+     case .authorized:
+         completion(true, nil)
+     case .denied:
+         completion(false, nil)
+     case .restricted:
+         completion(false, nil)
+     case .writeOnly:
+         // L'accès en écriture seulement est accordé, mais pas en lecture.
+         completion(true, nil)
+     case .fullAccess:
+         completion(true, nil)
+     @unknown default:
+         // Gestion des nouveaux cas inconnus.
+         completion(false, nil)
+     }
+ }
+ **/

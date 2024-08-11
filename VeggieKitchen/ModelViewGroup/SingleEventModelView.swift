@@ -24,8 +24,9 @@ struct SingleEventModelView: View {
             
                 
                 if let notes = event.notes, !notes.isEmpty {
-                    HTMLTextView(htmlContent: notes, dynamicHeight: $webViewHeight)
-                        .frame(height: webViewHeight)
+                    
+                    Text("\(notes)")
+         
                 }
             }
             .padding()
