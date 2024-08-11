@@ -24,6 +24,7 @@ final class VeggieKitchenUITests: XCTestCase {
           // Ajouter des assertions ou interactions avec l'interface utilisateur ici
       }
 
+
       func testLaunchPerformance() throws {
           if #available(iOS 13.0, *) {
               measure(metrics: [XCTApplicationLaunchMetric()]) {

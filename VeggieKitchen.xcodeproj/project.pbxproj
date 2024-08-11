@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1663C02C6903B200C256BB /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1663BF2C6903B200C256BB /* SplashScreen.swift */; };
+		CE1663C52C6909C200C256BB /* SwiftUICalendar in Frameworks */ = {isa = PBXBuildFile; productRef = CE1663C42C6909C200C256BB /* SwiftUICalendar */; };
+		CE1663C72C6909D100C256BB /* SwiftUICalendar in Frameworks */ = {isa = PBXBuildFile; productRef = CE1663C62C6909D100C256BB /* SwiftUICalendar */; };
+		CE1663C92C6909DC00C256BB /* SwiftUICalendar in Frameworks */ = {isa = PBXBuildFile; productRef = CE1663C82C6909DC00C256BB /* SwiftUICalendar */; };
+		CE1663CD2C69213900C256BB /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE1663CC2C69213800C256BB /* sample.jpg */; };
 		CE993FC42C665A79004CAB28 /* SingleEventModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE993FC32C665A79004CAB28 /* SingleEventModelView.swift */; };
 		CEDBD8BE2C63FA2500278B73 /* CalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */; };
 		CEE2A4852C67757A003E2A87 /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2A4842C67757A003E2A87 /* CustomDateFormatter.swift */; };
@@ -67,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE1663BF2C6903B200C256BB /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		CE1663CC2C69213800C256BB /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		CE993FC32C665A79004CAB28 /* SingleEventModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventModelView.swift; sourceTree = "<group>"; };
 		CEDBD8BD2C63FA2400278B73 /* CalendarManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManagerTests.swift; sourceTree = "<group>"; };
 		CEE2A4842C67757A003E2A87 /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
@@ -117,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1663C52C6909C200C256BB /* SwiftUICalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1663C72C6909D100C256BB /* SwiftUICalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1663C92C6909DC00C256BB /* SwiftUICalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +226,7 @@
 		CEF1FD912C6298BC00E016A5 /* VeggieKitchenUITests */ = {
 			isa = PBXGroup;
 			children = (
+				CE1663CC2C69213800C256BB /* sample.jpg */,
 				CEF1FD922C6298BC00E016A5 /* VeggieKitchenUITests.swift */,
 				CEF1FD942C6298BC00E016A5 /* VeggieKitchenUITestsLaunchTests.swift */,
 			);
@@ -241,6 +252,7 @@
 				CEF1FDD42C629A4C00E016A5 /* CalendarEventsView.swift */,
 				CEF1FDD22C629A4C00E016A5 /* MainTabView.swift */,
 				CEE81ED62C67D8FB00FD71A5 /* CalendarAcessView.swift */,
+				CE1663BF2C6903B200C256BB /* SplashScreen.swift */,
 			);
 			path = ViewGroup;
 			sourceTree = "<group>";
@@ -351,6 +363,9 @@
 			dependencies = (
 			);
 			name = VeggieKitchen;
+			packageProductDependencies = (
+				CE1663C42C6909C200C256BB /* SwiftUICalendar */,
+			);
 			productName = VeggieKitchen;
 			productReference = CEF1FD722C6298B900E016A5 /* VeggieKitchen.app */;
 			productType = "com.apple.product-type.application";
@@ -369,6 +384,9 @@
 				CEF1FD862C6298BC00E016A5 /* PBXTargetDependency */,
 			);
 			name = VeggieKitchenTests;
+			packageProductDependencies = (
+				CE1663C62C6909D100C256BB /* SwiftUICalendar */,
+			);
 			productName = VeggieKitchenTests;
 			productReference = CEF1FD842C6298BC00E016A5 /* VeggieKitchenTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -387,6 +405,9 @@
 				CEF1FD902C6298BC00E016A5 /* PBXTargetDependency */,
 			);
 			name = VeggieKitchenUITests;
+			packageProductDependencies = (
+				CE1663C82C6909DC00C256BB /* SwiftUICalendar */,
+			);
 			productName = VeggieKitchenUITests;
 			productReference = CEF1FD8E2C6298BC00E016A5 /* VeggieKitchenUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -423,6 +444,9 @@
 				Base,
 			);
 			mainGroup = CEF1FD692C6298B900E016A5;
+			packageReferences = (
+				CE1663C32C69090600C256BB /* XCRemoteSwiftPackageReference "SwiftUICalendar" */,
+			);
 			productRefGroup = CEF1FD732C6298B900E016A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -458,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1663CD2C69213900C256BB /* sample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +506,7 @@
 				CEF1FDBE2C6299FE00E016A5 /* MockRecipesService.swift in Sources */,
 				CEF1FDBF2C6299FE00E016A5 /* NetWorking.swift in Sources */,
 				CEF1FDC22C6299FE00E016A5 /* RealRecipesService.swift in Sources */,
+				CE1663C02C6903B200C256BB /* SplashScreen.swift in Sources */,
 				CEF1FDD72C629A4C00E016A5 /* CalendarEventsView.swift in Sources */,
 				CEF1FDD92C629A5200E016A5 /* AddMealModelView.swift in Sources */,
 				CE993FC42C665A79004CAB28 /* SingleEventModelView.swift in Sources */,
@@ -825,6 +851,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE1663C32C69090600C256BB /* XCRemoteSwiftPackageReference "SwiftUICalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GGJJack/SwiftUICalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.14;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE1663C42C6909C200C256BB /* SwiftUICalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE1663C32C69090600C256BB /* XCRemoteSwiftPackageReference "SwiftUICalendar" */;
+			productName = SwiftUICalendar;
+		};
+		CE1663C62C6909D100C256BB /* SwiftUICalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE1663C32C69090600C256BB /* XCRemoteSwiftPackageReference "SwiftUICalendar" */;
+			productName = SwiftUICalendar;
+		};
+		CE1663C82C6909DC00C256BB /* SwiftUICalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE1663C32C69090600C256BB /* XCRemoteSwiftPackageReference "SwiftUICalendar" */;
+			productName = SwiftUICalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEF1FD6A2C6298B900E016A5 /* Project object */;
 }

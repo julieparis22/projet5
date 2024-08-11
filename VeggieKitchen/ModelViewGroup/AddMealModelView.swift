@@ -37,7 +37,7 @@ struct AddMealModelView: View {
             DatePicker(
                            " ",
                            selection: $date,
-                           in: currentDate...endDate, // Plage de dates
+                           in: currentDate...endDate,
                            displayedComponents: [.date, .hourAndMinute]
                        )
                        .padding()

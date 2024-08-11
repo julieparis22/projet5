@@ -39,7 +39,7 @@ class GetSingleRecipeTests: XCTestCase {
     func givenFetchRecipeDetailsSucceeds_whenFetchingRecipeDetails_thenRecipeDetailsAreFetchedSuccessfully() throws {
     
         let expectation = self.expectation(description: "Fetch recipe details")
-        let mockRecipe = Recipe(extendedIngredients: [Ingredient(id: 3, original: "tomato ")], id: 1, title: "title", readyInMinutes: 5, image: "sample", imageType: "jpg", summary: "instructions")
+        let mockRecipe = Recipe(extendedIngredients: [Ingredient(id: 3, original: "tomato ")], id: 1, title: "title", readyInMinutes: 5, image: "sample", imageType: "jpg", instructions: "instructions")
         let mockData = try JSONEncoder().encode(mockRecipe)
         mockRecipesService = MockRecipesService(mockData: mockData)
         getSingleRecipe = GetSingleRecipe(recipeService: mockRecipesService)

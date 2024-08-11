@@ -33,7 +33,7 @@ class CalendarManagerTests: XCTestCase {
         let endDate = startDate.addingTimeInterval(3600)
         let instructions = "Test instructions"
         
-        calendarManager.addEventToCalendar(title: title, startDate: startDate, endDate: endDate, instructions: instructions) { success, error in
+        calendarManager.addEventToCalendar(title: title, startDate: startDate, endDate: endDate, instructions: instructions, ingredients: [IngredientMeal(original: "tomato")]) { success, error in
             XCTAssertTrue(success, "Event should be added successfully")
             XCTAssertNil(error, "There should be no error")
             expectation.fulfill()
@@ -66,7 +66,7 @@ class CalendarManagerTests: XCTestCase {
         let endDate = startDate.addingTimeInterval(3600)
         let instructions = "This event will be deleted"
         
-        calendarManager.addEventToCalendar(title: title, startDate: startDate, endDate: endDate, instructions: instructions) { success, error in
+        calendarManager.addEventToCalendar(title: title, startDate: startDate, endDate: endDate, instructions: instructions, ingredients: [IngredientMeal(original: "tomato")]) { success, error in
             XCTAssertTrue(success, "Event should be added successfully")
             
             // Now, fetch the event

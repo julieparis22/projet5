@@ -11,8 +11,8 @@ import Combine
 
 
 class MockRecipesService: RecipesService {
-    private let mockData: Data?
-    private let mockError: Error?
+    var mockData: Data?
+    let mockError: Error?
 
     init(mockData: Data? = nil, mockError: Error? = nil) {
         self.mockData = mockData

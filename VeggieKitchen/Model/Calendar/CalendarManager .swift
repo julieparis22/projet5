@@ -75,34 +75,3 @@ class CalendarManager: ObservableObject {
 }
 
 
-
-/*
- 
- 
- func requestCalendarAccess(completion: @escaping (Bool, Error?) -> Void) {
-     let status = EKEventStore.authorizationStatus(for: .event)
-     
-     switch status {
-     case .notDetermined:
-         eventStore.requestFullAccessToEvents { granted, error in
-             DispatchQueue.main.async {
-                 completion(granted, error)
-             }
-         }
-     case .authorized:
-         completion(true, nil)
-     case .denied:
-         completion(false, nil)
-     case .restricted:
-         completion(false, nil)
-     case .writeOnly:
-         // L'accès en écriture seulement est accordé, mais pas en lecture.
-         completion(true, nil)
-     case .fullAccess:
-         completion(true, nil)
-     @unknown default:
-         // Gestion des nouveaux cas inconnus.
-         completion(false, nil)
-     }
- }
- **/
